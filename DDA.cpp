@@ -48,6 +48,16 @@ void display() {
 	glLoadIdentity();
 
 	glPointSize(2);
+
+	glBegin(GL_LINES);
+	glVertex2i(0,-100); glVertex2i(0,100);
+	glEnd();
+
+	glBegin(GL_LINES);
+	glVertex2i(-100,0); glVertex2i(100,0);
+	glEnd();
+	glFlush();
+
 	glBegin(GL_POINTS);
 
 	setPointsByDDA();
@@ -69,10 +79,10 @@ int main(int argc, char ** argv)
 	glutInit(&argc,argv);
 	glutInitDisplayMode(GLUT_RGB);
 
-	glutInitWindowPosition(800,300);
-	glutInitWindowSize(700,700);
+	glutInitWindowPosition(100,100);
+	glutInitWindowSize(800,800);
 
-	glutCreateWindow("Shape");
+	glutCreateWindow("DDA");
 
 	glutDisplayFunc(display);
 	glutReshapeFunc(reshape);
