@@ -21,9 +21,9 @@ void display() {
 	//glPointSize(10);
 	glBegin(GL_POLYGON);
 	glColor3f(0.2,0.7,0.5); glVertex3f(-1,-1,0); 
-	/*glColor3f(1,1,0.5);*/ glVertex3f(-1,1,0);
-	/*glColor3f(1,0.0,0.5);*/ glVertex3f(1,1,0);
-	/*glColor3f(1,0.5,1);*/ glVertex3f(1,-1,0);
+	glColor3f(1,1,0.5); glVertex3f(-1,1,0);
+	glColor3f(1,0.0,0.5); glVertex3f(1,1,0);
+	glColor3f(1,0.5,1); glVertex3f(1,-1,0);
 
 	glEnd();
 	
@@ -69,7 +69,7 @@ int main(int argc, char ** argv)
 
 	glutDisplayFunc(display);
 	glutReshapeFunc(reshape);
-	glutTimerFunc(500,timer,0);
+	glutTimerFunc(0,timer,0);
 
 	init();
 	glutMainLoop();
